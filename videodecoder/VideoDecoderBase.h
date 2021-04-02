@@ -25,7 +25,7 @@
 #include <dlfcn.h>
 
 extern "C" {
-#include "vbp_loader.h"
+#include <vbp_loader.h>
 }
 
 #ifndef Display

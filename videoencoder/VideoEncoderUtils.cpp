@@ -20,7 +20,7 @@
 #include <va/va_drmcommon.h>
 
 #ifdef IMG_GFX
-#include "hal_public.h"
+#include <hal_public.h>
 #include <sync/sync.h>
 
 //#define GFX_DUMP

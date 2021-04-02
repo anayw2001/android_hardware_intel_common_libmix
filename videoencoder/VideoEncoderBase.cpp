@@ -1165,6 +1165,7 @@ Encode_Status VideoEncoderBase::getParameters(
                     profilelevel->isSupported = false;
                 }
             }
+            [[fallthrough]];
         }
 
         case VideoParamsTypeTemporalLayer:{

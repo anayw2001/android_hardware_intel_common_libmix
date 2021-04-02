@@ -85,6 +85,7 @@ ifeq ($(ENABLE_IMG_GRAPHICS),true)
     endif
 endif
 
+LOCAL_HEADER_LIBRARIES := intel_hwcomposer_headers libstagefright_foundation_headers
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libva_videoencoder

@@ -16,6 +16,7 @@
 
 #ifndef __VIDEO_ENCODER_UTILS_H__
 #define __VIDEO_ENCODER_UTILS_H__
+#include <string.h>
 #include <va/va.h>
 #include <va/va_tpi.h>
 #include "VideoEncoderDef.h"
