@@ -20,7 +20,6 @@ LOCAL_SRC_FILES := \
 LOCAL_CLANG_CFLAGS += -Wno-overloaded-virtual
 
 LOCAL_C_INCLUDES := \
-    $(TARGET_OUT_HEADERS)/libva \
     $(TARGET_OUT_HEADERS)/libmixvbp
 
 LOCAL_HEADER_LIBRARIES := intel_vbp_mix_headers
