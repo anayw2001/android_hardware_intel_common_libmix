@@ -19,7 +19,7 @@
 
 #define LOG_TAG "VideoEncoder"
 
-#include <wrs_omxil_core/log.h>
+#include <log.h>
 
 #define LOG_V ALOGV
 #define LOG_D ALOGD

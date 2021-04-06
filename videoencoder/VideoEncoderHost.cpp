@@ -24,7 +24,7 @@
 #include "VideoEncoderHost.h"
 #include <string.h>
 #include <cutils/properties.h>
-#include <wrs_omxil_core/log.h>
+#include <log.h>
 
 int32_t gLogLevel = 0;
 

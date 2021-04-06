@@ -16,7 +16,7 @@
 
 //#define LOG_NDEBUG 0
 #define LOG_TAG "IntelMetadataBuffer"
-#include <wrs_omxil_core/log.h>
+#include <log.h>
 
 #include "IntelMetadataBuffer.h"
 #include <string.h>

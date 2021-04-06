@@ -46,7 +46,7 @@ TraceVideoDecoder(cat, __FUNCTION__, __LINE__, format,  ##__VA_ARGS__)
 
 #define LOG_TAG "VideoDecoder"
 
-#include <wrs_omxil_core/log.h>
+#include <log.h>
 #define ETRACE(...) LOGE(__VA_ARGS__)
 #define WTRACE(...) LOGW(__VA_ARGS__)
 #define ITRACE(...) LOGI(__VA_ARGS__)

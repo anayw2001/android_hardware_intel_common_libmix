@@ -16,7 +16,7 @@
 
 //#define LOG_NDEBUG 0
 #define LOG_TAG "PVSoftMPEG4Encoder"
-#include <wrs_omxil_core/log.h>
+#include <log.h>
 
 #include "mp4enc_api.h"
 #include "OMX_Video.h"

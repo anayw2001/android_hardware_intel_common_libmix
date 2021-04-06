@@ -32,7 +32,6 @@ ifeq ($(ENABLE_IMG_GRAPHICS),)
 endif
 
 LOCAL_C_INCLUDES := \
-    $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native) \
     $(TARGET_OUT_HEADERS)/pvr/hal
 
@@ -85,7 +84,11 @@ ifeq ($(ENABLE_IMG_GRAPHICS),true)
     endif
 endif
 
-LOCAL_HEADER_LIBRARIES := intel_hwcomposer_headers libstagefright_foundation_headers
+LOCAL_HEADER_LIBRARIES := \
+    intel_hwcomposer_headers \
+    libstagefright_foundation_headers \
+    wrs_omxil_core_headers
+
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libva_videoencoder
@@ -111,6 +114,8 @@ ifeq ($(INTEL_VIDEO_XPROC_SHARING),true)
 LOCAL_SHARED_LIBRARIES := liblog libutils libbinder libgui \
                           libui libcutils libhardware
 endif
+
+LOCAL_HEADER_LIBRARIES := wrs_omxil_core_headers
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libintelmetadatabuffer

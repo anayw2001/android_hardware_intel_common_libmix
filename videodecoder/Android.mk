@@ -19,10 +19,7 @@ LOCAL_SRC_FILES := \
 # which hides overloaded virtual function parseBuffer.
 LOCAL_CLANG_CFLAGS += -Wno-overloaded-virtual
 
-LOCAL_C_INCLUDES := \
-    $(TARGET_OUT_HEADERS)/libmixvbp
-
-LOCAL_HEADER_LIBRARIES := intel_vbp_mix_headers
+LOCAL_HEADER_LIBRARIES := intel_vbp_mix_headers wrs_omxil_core_headers
 ifeq ($(USE_INTEL_SECURE_AVC),true)
 LOCAL_CFLAGS += -DUSE_INTEL_SECURE_AVC
 LOCAL_SRC_FILES += securevideo/$(TARGET_BOARD_PLATFORM)/VideoDecoderAVCSecure.cpp
