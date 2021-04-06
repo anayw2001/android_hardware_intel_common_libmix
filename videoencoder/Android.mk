@@ -57,13 +57,6 @@ LOCAL_SHARED_LIBRARIES := \
     libintelmetadatabuffer \
     libsync
 
-LOCAL_COPY_HEADERS_TO  := libmix_videoencoder
-
-LOCAL_COPY_HEADERS := \
-    VideoEncoderHost.h \
-    VideoEncoderInterface.h \
-    VideoEncoderDef.h
-
 ifeq ($(VIDEO_ENC_LOG_ENABLE),true)
 LOCAL_CPPFLAGS += -DVIDEO_ENC_LOG_ENABLE
 endif
@@ -89,6 +82,7 @@ LOCAL_HEADER_LIBRARIES := \
     libstagefright_foundation_headers \
     wrs_omxil_core_headers
 
+LOCAL_EXPORT_HEADER_LIBRARY_HEADERS := intel_libmix_headers
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libva_videoencoder
@@ -105,16 +99,12 @@ VIDEO_ENC_LOG_ENABLE := true
 LOCAL_SRC_FILES := \
     IntelMetadataBuffer.cpp
 
-LOCAL_COPY_HEADERS_TO  := libmix_videoencoder
-
-LOCAL_COPY_HEADERS := \
-    IntelMetadataBuffer.h
-
 ifeq ($(INTEL_VIDEO_XPROC_SHARING),true)
 LOCAL_SHARED_LIBRARIES := liblog libutils libbinder libgui \
                           libui libcutils libhardware
 endif
 
+LOCAL_EXPORT_HEADER_LIBRARY_HEADERS := intel_libmix_headers
 LOCAL_HEADER_LIBRARIES := wrs_omxil_core_headers
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional

@@ -59,17 +59,7 @@ LOCAL_SHARED_LIBRARIES := \
     libva-tpi \
     libdl
 
-LOCAL_COPY_HEADERS_TO  := libmix_videodecoder
-
-LOCAL_COPY_HEADERS := \
-    VideoDecoderHost.h \
-    VideoDecoderInterface.h \
-    VideoDecoderDefs.h
-
-ifneq ($(filter $(TARGET_BOARD_PLATFORM),$(PLATFORM_SUPPORT_SLICE_HEADER_PARSER)),)
-    LOCAL_COPY_HEADERS += securevideo/$(TARGET_BOARD_PLATFORM)/VideoFrameInfo.h
-endif
-
+LOCAL_EXPORT_HEADER_LIBRARY_HEADERS := intel_libmix_headers
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libva_videodecoder
