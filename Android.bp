@@ -2,3 +2,8 @@ cc_library_headers {
 	name: "intel_libmix_headers",
 	export_include_dirs: ["."],
 }
+
+cc_library_headers {
+	name: "moorefield_securevideo_headers",
+	export_include_dirs: ["videodecoder/securevideo/moorefield"],
+}
